@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Fila de Ping Pong</title>
+    </head>
+    <body>
+        <header class="header">
+            <img src="assets/pingpong.png" alt="" class="logo">
+            <h1 class="title">Ping Pong</h1>
+        </header>
+        <main>
+            <section class="option__container">
+                <h2 class="option__title">¿Quien Gano?</h2>
+                <div id="firstPlayerBox" class="option__box option__box--first-player">
+                    <input
+                        type="button"
+                        id="firstPlayer"
+                        class="option option--firstPlayer"
+                    />
+                    <span id="games-won" class="games-won"></span>
+                </div>
+                <div id="secondPlayerBox" class="option__box option__box--second-player">
+                    <input
+                    type="button"
+                    id="secondPlayer"
+                    class="option option--secondPlayer"
+                    />
+                </div>
+                </section>
+            <section class="add-player__container">
+                <h2 class="add-player__title">Agregar Jugadores</h2>
+                <input
+                    type="text"
+                    class="add-player__input"
+                    id="add-player__input"
+                    placeholder="Ingresa el Jugador"
+                />
+                <button class="add-player__button" id="add-player__button">
+                    Añadir
+                </button>
+            </section>
+            <section id="list__container" class="list__container">
+                <!-- <div class="player__container">
+                    <p class="player">Player</p>
+                    <button class="player__delete">Eliminar</button>
+                </div> -->
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

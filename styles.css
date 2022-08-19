@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #eee;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c44ac;
+    padding: 1em 0;
+    box-shadow: 0 10px 10px 1px #0003;
+    text-align: center;
+}
+
+.logo{
+    filter: invert();
+    width: 15%;
+    margin: 0;
+    padding: 0;
+    -webkit-filter: invert();
+}
+
+.title{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #edf2f4;
+}
+
+.option__title{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.option__box{
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    padding: 6em 0;
+    text-align: center;
+    color: #fff;
+    background-color: #0c44ac;
+    border: 3px solid #fff;
+    box-shadow: 10px 10px 8px 1px #0003;
+}
+
+.option__box--first-player{
+    background-color: #ed0101;
+}
+
+.option{
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+}
+
+.games-won{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.add-player__container{
+    margin-bottom: 2em;
+}
+
+
+.add-player__title{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.add-player__input{
+    display: inline-block;
+    width: 60%;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #888;
+}
+
+.add-player__button{
+    display: inline-block;
+    width: 20%;
+    padding: .5em 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000052;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    border: none;
+}
+
+.player__container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding-bottom: .5em;
+    margin: 0 auto 1em;
+    font-size: 1.2rem;
+    color: #000052;
+    border-bottom: 2px solid #000052;
+}
+
+.player__delete{
+    border: none;
+    width: 12%;
+}
+
+.trash{
+    max-width: 100%;
+    filter: invert(11%) sepia(74%) saturate(7493%) hue-rotate(3deg) brightness(108%) contrast(115%);
+    -webkit-filter: invert(11%) sepia(74%) saturate(7493%) hue-rotate(3deg) brightness(108%) contrast(115%);
+}
