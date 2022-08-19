@@ -16,7 +16,7 @@ const listContainer = document.getElementById("list__container");
 
 const deletePlayerButtonList = document.getElementsByClassName('player__delete');
 
-const list = ['Esteban'];
+const list = [];
 
 let streak = 0;
 
@@ -26,23 +26,25 @@ const addPlayer = () => {
     if (addPlayerInput.value == "$allPlayers") {
         list.splice(0);
         list.push(
-            "Esteban",
-            "Siabatto",
-            "Ricardo",
-            "Daniel",
-            "Andres",
-            "William",
-            "Acuña",
-            "Nicolas",
-            "Blessd",
-            "Marles",
-            "Paula",
-            "Felipe"
+            "ESTEBAN",
+            "SIABATTO",
+            "RICARDO",
+            "DANIEL",
+            "ANDRES",
+            "WILLIAM",
+            "ACUÑA",
+            "NICOLAS",
+            "BLESSD",
+            "MARLES",
+            "PAULA",
+            "FELIPE"
         );
+        streak = 0;
     } else if (addPlayerInput.value == "$clearAll") {
         list.splice(0);
+        streak = 0;
     } else {
-        list.push(addPlayerInput.value);
+        list.push(addPlayerInput.value.toUpperCase());
     }
     addPlayerInput.value = "";
     showPlayers();
@@ -54,9 +56,18 @@ const deletePlayer = (index) => {
 };
 
 const showPlayers = () => {
-    firstPlayer.setAttribute("value", list[0]);
-    streakSpan.textContent = streak;
-    secondPlayer.setAttribute("value", list[1]);
+    if(list.length >=2){
+        firstPlayer.setAttribute("value", list[0]);
+        streakSpan.textContent = streak;
+        secondPlayer.setAttribute("value", list[1]);
+    }else if(list.length >=1){
+        firstPlayer.setAttribute("value", list[0]);
+        streakSpan.textContent = streak;
+        secondPlayer.setAttribute("value", 'Añade Jugadores');
+    }else{
+        firstPlayer.setAttribute("value", 'Añade Jugadores');
+        secondPlayer.setAttribute("value", 'Añade Jugadores');
+    }
     showRow(list);
 };
 
@@ -87,12 +98,12 @@ const showRow = (list) => {
 };
 
 const playerWin = (win) => {
-    if (win === 1) {
+    if (win === 1 && list.length >=2) {
         list.push(list[1]);
         list.splice(1, 1);
         streak++;
 
-    } else if (win === 2) {
+    } else if (win === 2 && list.length >=2) {
         list.push(list[0]);
         list.splice(0, 1);
         streak=1;
@@ -101,6 +112,14 @@ const playerWin = (win) => {
 };
 
 // Eventos
+firstPlayerBox.addEventListener("click", () => {
+    playerWin(1);
+});
+
+secondPlayerBox.addEventListener("click", () => {
+    playerWin(2);
+});
+
 addPlayerButton.addEventListener("click", () => {
     if (addPlayerInput.value !== "" && addPlayerInput.value.trim() !== "") {
         addPlayer();
@@ -114,14 +133,6 @@ listContainer.addEventListener('click',(e)=>{
         deletePlayer(e.target.parentNode.getAttribute('id'));
     }
 })
-
-firstPlayerBox.addEventListener("click", () => {
-    playerWin(1);
-});
-
-secondPlayerBox.addEventListener("click", () => {
-    playerWin(2);
-});
 
 // Inicialización
 showPlayers();

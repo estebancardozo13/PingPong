@@ -21,7 +21,7 @@ body{
 
 .logo{
     filter: invert();
-    width: 15%;
+    width: 60px;
     margin: 0;
     padding: 0;
     -webkit-filter: invert();
@@ -43,6 +43,7 @@ body{
     display: block;
     margin: 0 auto;
     width: 60%;
+    max-width: 300px;
     padding: 6em 0;
     text-align: center;
     color: #fff;
@@ -135,4 +136,12 @@ body{
     max-width: 100%;
     filter: invert(11%) sepia(74%) saturate(7493%) hue-rotate(3deg) brightness(108%) contrast(115%);
     -webkit-filter: invert(11%) sepia(74%) saturate(7493%) hue-rotate(3deg) brightness(108%) contrast(115%);
+}
+
+.footer{
+    width: 100%;
+    padding: .5em 0;
+    text-align: center;
+    color: #fff;
+    background-color: #0c44ac;
 }
