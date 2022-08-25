@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,36 +14,36 @@
         </header>
         <main>
             <section class="option__container">
-                <h2 class="option__title">¿Quien Gano?</h2>
-                <div id="firstPlayerBox" class="option__box option__box--first-player">
-                    <input
-                        type="button"
-                        id="firstPlayer"
-                        class="option option--firstPlayer"
-                    />
-                    <span id="games-won" class="games-won"></span>
+                <h2 class="option__title">Jugadores en mesa</h2>
+                <span class="option__subtitle">Selecciona el ganador</span>
+                <div id="firstPlayer" class="option__box option__box--first-player">
+                    <p id="firstPlayerName" class="option__name option__name--first-player"></p>
+                    <span id="streakSpan" class="games-won"></span>
                 </div>
-                <div id="secondPlayerBox" class="option__box option__box--second-player">
-                    <input
-                    type="button"
-                    id="secondPlayer"
-                    class="option option--secondPlayer"
-                    />
+                <aside class="return" id="backGame">
+                    <img src="assets/back.png" alt="return">
+                </aside>
+                <div id="secondPlayer" class="option__box option__box--second-player">
+                    <p id="secondPlayerName" class="option__name option__name--second-player"></p>
                 </div>
+                <aside>
+                    <p id="nextPlayer" class="next-player">Siguiente Jugador: <span id="nextPlayerName"></span></p>
+                </aside>
                 </section>
+
             <section class="add-player__container">
                 <h2 class="add-player__title">Agregar Jugadores</h2>
                 <input
                     type="text"
                     class="add-player__input"
-                    id="add-player__input"
+                    id="addPlayerInput"
                     placeholder="Ingresa el Jugador"
                 />
-                <button class="add-player__button" id="add-player__button">
+                <button class="add-player__button" id="addPlayerButton">
                     Añadir
                 </button>
             </section>
-            <section id="list__container" class="list__container">
+            <section id="listContainer" class="list__container">
                 <!-- <div class="player__container">
                     <p class="player">Player</p>
                     <button class="player__delete">Eliminar</button>

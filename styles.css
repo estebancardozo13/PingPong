@@ -14,7 +14,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #0c44ac;
-    padding: 1em 0;
+    padding: .5em 0;
     box-shadow: 0 10px 10px 1px #0003;
     text-align: center;
 }
@@ -34,9 +34,25 @@ body{
     color: #edf2f4;
 }
 
+/* Players in game */
+
+.option__container{
+    position: relative;
+}
+
 .option__title{
+    margin-bottom: 0;
     font-size: 2rem;
     text-align: center;
+    color: #000052;
+}
+
+.option__subtitle{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1em;
+    text-align: center;
+    color: #888;
 }
 
 .option__box{
@@ -56,23 +72,38 @@ body{
     background-color: #ed0101;
 }
 
-.option{
-    display: block;
-    width: 100%;
-    height: 100%;
-    font-size: 1.2rem;
-    text-align: center;
+.option__name{
+    font-size: 1.5rem;
+    margin: 0;
     text-transform: uppercase;
     font-weight: bold;
     color: #fff;
-    background-color: transparent;
-    border: none;
 }
 
-.games-won{
-    display: block;
-    font-size: 1.5rem;
-    font-weight: bold;
+.return{
+    position: absolute;
+    top: 40%;
+    left: 2em;
+    width: 10%;
+    text-align: center;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.return img{
+    max-width: 100%;
+    filter: invert(11%) sepia(30%) saturate(6522%) hue-rotate(230deg) brightness(82%) contrast(123%);
+}
+
+
+.next-player{
+    margin-top: 2em;
+    margin-left: 2em;
+    font-weight:bold;
+    color: #000052;
 }
 
 .add-player__container{
@@ -83,6 +114,7 @@ body{
 .add-player__title{
     text-align: center;
     font-size: 2rem;
+    color: #000052;
 }
 
 .add-player__input{
